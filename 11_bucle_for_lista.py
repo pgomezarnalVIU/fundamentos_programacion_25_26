@@ -14,8 +14,8 @@ for numero in lista_numeros:
     print(numero)
 
 # temperaturas de un sensor de un congelador
-temperatturas_sensor = [-5, -6, -5, -8, 0, -4 ,-5]
-for temperatura in temperatturas_sensor:
+temperaturas_sensor = [-5, -6, -5, -8, 0, -4 ,-5]
+for temperatura in temperaturas_sensor:
     if temperatura >=0:
         print(f"{temperatura} es mayor o igual a {0}")
         print("Existe un error en el congelador")
