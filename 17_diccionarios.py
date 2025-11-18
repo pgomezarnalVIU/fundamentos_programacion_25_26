@@ -20,7 +20,10 @@ print(registro_sara["Nombre"])
 # Imprimir los valores de un diccionario
 for clave in registro_paco:
     print(registro_paco[clave])
+for value in registro_paco.values():
+    print(value)
 
 # Imprimir clave valor
+registro_paco["Altura"]= 180
 for clave,valor in registro_paco.items():
     print(f"{clave} = {valor}")
