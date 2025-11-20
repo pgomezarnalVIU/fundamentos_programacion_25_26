@@ -1,6 +1,6 @@
 # Suma
-def suma(a, b):
-    return a + b
+def suma(a, b, pa = 1, pb = 1):
+    return pa * a + pb * b
 
 
 # Resta
@@ -15,7 +15,11 @@ def multiplica(a, b):
 
 # Division
 def division(a, b):
-    return a / b
+    try:
+        result = a / b
+    except ZeroDivisionError:
+        result = None
+    return result
 
 
 # Interfaz
@@ -41,18 +45,25 @@ while True:
         break
     #elif opcion > 0 and opcion < 5:
     elif 0 < opcion < 5:
-        numero1 = int(input("Introduce el primer numero: "))
-        numero2 = int(input("Introduce el segundo numero: "))
+        try:
+            numero1 = int(input("Introduce el primer numero: "))
+            numero2 = int(input("Introduce el segundo numero: "))
+        except ValueError:
+            print("No has introducido un numero")
+            continue
 
-        # Realizo el cálcuculo
-        if opcion == 1:
-            print(f"La suma de los dos numeros es {suma(numero1, numero2)}")
-        elif opcion == 2:
-            print(f"La resta de los dos numeros es {resta(numero1, numero2)}")
-        elif opcion == 3:
-            print(f"La multiplicacion de los dos numeros es {multiplica(numero1, numero2)}")
-        elif opcion == 4:
-            print(f"La division de los dos numeros es {division(numero1, numero2)}")
+        # Realizo el cálculo
+        try:
+            if opcion == 1:
+                print(f"La suma de los dos numeros es {suma(numero1, numero2)}")
+            elif opcion == 2:
+                print(f"La resta de los dos numeros es {resta(numero1, numero2)}")
+            elif opcion == 3:
+                print(f"La multiplicacion de los dos numeros es {multiplica(numero1, numero2)}")
+            elif opcion == 4:
+                print(f"La division de los dos numeros es {division(numero1, numero2)}")
+        except TypeError:
+            print("Existe un error en la introduccion")
     else:
         print("Opcion no es valida")
 
