@@ -1,3 +1,4 @@
+# Módulo para simular tiradas de dados de diferentes tipos
 import random
 
 
