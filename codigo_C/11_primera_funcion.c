@@ -1,6 +1,9 @@
 //Incluyendo las librerias necesarias
 #include <stdio.h>
 
+//Prototipo de la funcion
+int comparar_enteros(int a, int b);
+
 //Definiendo la función principal
 int main(void) {
     int num1, num2, resultado;
