@@ -14,7 +14,3 @@ class Empleado:
         if not isinstance(self.edad, int) or self.edad <= 0:
             return False
         return True
-    
-    # Metode que valide edad es mayor de 18
-    def es_mayor_de_edad(self):
-        return self.edad >= 18
